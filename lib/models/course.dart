@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 
 import '../data/sample_courses.dart';
+import '../logic/time_helper.dart';
 
 class Course {
   String id;
@@ -44,16 +45,30 @@ class Course {
         'day': day,
         'startTime': startTime,
         'endTime': endTime,
+        'start': timeToMinutes(startTime) ?? 0,
+        'end': timeToMinutes(endTime) ?? 0,
       };
 
   factory Course.fromDoc(DocumentSnapshot<Map<String, dynamic>> doc) {
     final data = doc.data() ?? {};
+
+    String parseTime(dynamic raw, String fallback) {
+      if (raw == null) return fallback;
+      if (raw is int) {
+        return formatMinutesToTime(raw);
+      }
+      return raw.toString();
+    }
+
+    final sTime = parseTime(data['startTime'] ?? data['start'], '08:00');
+    final eTime = parseTime(data['endTime'] ?? data['end'], '10:00');
+
     return Course(
       id: doc.id,
       name: data['name'] as String? ?? '',
       day: data['day'] as String? ?? 'Monday',
-      startTime: data['startTime'] as String? ?? '08:00',
-      endTime: data['endTime'] as String? ?? '10:00',
+      startTime: sTime,
+      endTime: eTime,
       createdAt: (data['createdAt'] as Timestamp?)?.toDate(),
     );
   }
