@@ -45,8 +45,13 @@ The app now stores its data in the cloud instead of only in memory.
 
 ## 📱 Screenshots
 https://github.com/M26600/my-week/blob/main/android/live.png
+
 https://github.com/M26600/my-week/blob/main/android/login.png
+
 https://github.com/M26600/my-week/blob/main/android/denied.png
+
+
+---
 
 ### Accounts
 - **Firebase Authentication** with **Email/Password** sign-in.
