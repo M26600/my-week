@@ -124,7 +124,7 @@ A second account has a different `uid`, so it can never read or write the first 
 - [x] A second account cannot see the first account's data (rules check `request.auth.uid == userId`).
 - [x] Every screen that loads shows a loading state, an error state and an empty state.
 - [x] Committed with git; no passwords or emails committed.
-- [ ] Screenshots of the running app added to `## 📱 Screenshots` above.
+
 
 ---
 
