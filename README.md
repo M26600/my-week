@@ -86,16 +86,6 @@ A second account has a different `uid`, so it can never read or write the first 
 
 ---
 
-## 📱 Screenshots
-
-| Week Dashboard | Clash Alert | Add / Edit Course | Empty Day State |
-| :---: | :---: | :---: | :---: |
-| *(Screenshot 1)* | *(Screenshot 2)* | *(Screenshot 3)* | *(Screenshot 4)* |
-
-*(Note: Add screenshots of your app running on device/emulator to your repo before submitting)*
-
----
-
 ## 🤔 Think Questions & Answers
 
 ### 1. Write your clash condition in plain words. Why `<` and not `<=`?
