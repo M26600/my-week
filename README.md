@@ -43,6 +43,11 @@
 
 The app now stores its data in the cloud instead of only in memory.
 
+## 📱 Screenshots
+https://github.com/M26600/my-week/blob/main/android/live.png
+https://github.com/M26600/my-week/blob/main/android/login.png
+https://github.com/M26600/my-week/blob/main/android/denied.png
+
 ### Accounts
 - **Firebase Authentication** with **Email/Password** sign-in.
 - `AuthGate` listens to `authStateChanges()`: a signed-in user sees the Week screen, a signed-out user sees the login screen. There is no way to reach the Week screen without an account.
